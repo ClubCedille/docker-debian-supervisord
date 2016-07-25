@@ -20,10 +20,3 @@ RUN /bin/echo -ne 'set nocompatible\nset backspace=eol,start,indent\nsyntax on\n
 ADD supervisor-default.conf /etc/supervisor/conf.d/default.conf
 
 CMD ["/bin/sh", "-c", "/usr/bin/supervisord -n"]
-
-# RUN curl -fsSL "https://github.com/just-containers/s6-overlay/releases/download/v1.18.1.3/s6-overlay-amd64.tar.gz" | tar zxf - -C /
-
-# volume ["/run"]
-
-# ENTRYPOINT ["/init"]
-# CMD ["/bin/bash","-l"]
