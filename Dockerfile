@@ -2,7 +2,7 @@ FROM clubcedille/debian
 MAINTAINER Michael Faille <michael@faille.io>
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    supervisor
+    supervisor && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD supervisor-default.conf /etc/supervisor/conf.d/default.conf
